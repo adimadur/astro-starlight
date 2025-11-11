@@ -3,22 +3,60 @@ title: Plans and Credits
 description: Learn about CodePup AI's plans, credits, and how billing works.
 ---
 
+import { Card, Badge, Tabs, TabItem } from '@astrojs/starlight/components';
+
 CodePup AI offers flexible pricing options designed for creators, startups, and teams of all sizes. Credits are used to generate and deploy projects — simple, transparent, and predictable.
 
 ## Plans Overview
 
-| Plan | Monthly Price | Projects | Team Members | Support | Notes |
-|------|----------------|-----------|---------------|----------|-------|
-| **Free** | $0 | Unlimited | 1 | Community | Ideal for exploring features |
-| **Pro** | $25 | Unlimited | 3 | Priority Email | For freelancers and small teams |
-| **Advance** | $50 | Unlimited | 10 | Priority + Chat | Best value for professionals |
-| **Enterprise** | Custom | Unlimited | Unlimited | Dedicated Engineer | For larger organizations |
+<Tabs>
+    <TabItem label="Basic">  <Card title="Basic" icon="approve-check">
+        <ul>
+            <Badge variant="note" text="$25/month" size="large" />
+            <li>30 daily credits</li>
+            <li>100 total credits</li>
+            <li>Features: Generation, Modification, Publish, Export to GitHub</li>
+            <li>Project Type: Public</li>
+            <li>Support: Community</li>
+        </ul>
+        <p><em>Perfect for individuals just starting out.</em></p>
+    </Card>
+    </TabItem>
+    <TabItem label="Pro"> <Card title="Pro" icon="approve-check">
+        <ul>
+            <Badge variant="note" text="$50/month" size="large" />
+            <li>30 daily credits</li>
+            <li>220 total credits</li>
+            <li>Features: Generation, Modification, Publish, Export to GitHub</li>
+            <li>Project Type: Private</li>
+            <li>Support: Priority Email</li>
+        </ul>
+        <p><em>Ideal for creators who need more flexibility.</em></p>
+    </Card>
+    </TabItem>
+    <TabItem label="Advance">  <Card title="Advance" icon="approve-check">
+        <ul>
+            <Badge variant="note" text="$200/month" size="large" />
+            <li>30 daily credits</li>
+            <li>1100 total credits</li>
+            <li>Features: Generation, Modification, Publish, Export to GitHub</li>
+            <li>Project Type: Private</li>
+            <li>Support: Dedicated Support</li>
+        </ul>
+        <p><em>For teams and professionals needing everything unlocked.</em></p>
+    </Card>
+    </TabItem>
+
+</Tabs>
+
+
+ 
 
 
 
 ## Credit System
 
-Each site generation or deployment consumes credits.  
+Each site generation or modification consumes credits.  
 Credits can be refilled anytime from your dashboard.
 
 | Action | Credit Usage |
@@ -26,19 +64,18 @@ Credits can be refilled anytime from your dashboard.
 | Generate new website | 15 credits |
 | Modify website | 5 credits |
 | Deploy to CodePup Hosting | Free (Public) |
-| Export project (ZIP) | Free |
-
-You can also earn free credits via referrals and early access programs.
-
+| Export project (GitHub) | Free |
+<br/>
+<br/>
 ---
 
 ## Billing and Subscription
 
-Payments are securely processed via Stripe.  
+Payments are securely processed via Stripe or Razorpay.  
 All plans are billed monthly, and you can cancel anytime — no hidden fees.
 
 Your credit balance resets at the start of each billing cycle.  
-Unused credits roll over automatically for paid users.
+Unused credits expire 2 months after the date of purchase.
 
 ---
 
@@ -46,13 +83,12 @@ Unused credits roll over automatically for paid users.
 
 - You can upgrade instantly from your dashboard.  
 - Downgrades take effect in the next billing cycle.  
-- Your projects remain safe and accessible even if you pause your subscription.
+- Your projects remain safe and accessible even if your subscription ends.
 
 ---
 
 ## Refund Policy
 
-We offer a 7-day money-back guarantee if you're unsatisfied for any reason.  
-Simply contact support with your transaction details.
+All payments are processed through third-party providers such as Stripe or Razorpay. Fees are non-refundable unless required by law. Paid Credits expire 2 months after purchase; free Credits expire at the end of their allocation.
 
 ---

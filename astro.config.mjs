@@ -42,13 +42,20 @@ export default defineConfig({
             sidebar: [
                 {
                     label: "Introduction",
-                    collapsed: true,
+                    // collapsed: true,
                     items: [
                         { label: "Welcome", link: "/introduction/welcome/" },
                         { label: "Plans and credits", link: "/introduction/plans-and-credits/" },
                         { label: "FAQ", link: "/introduction/faq/" },
                     ],
                 },
+                {
+                    label: "Changelog",
+                    items: [
+                        { label: "Publish", link: "/changelog/publish/" },
+                        { label: "Version Control", link: "/changelog/version-control/" },
+                    ],
+                }
             ],
             // Import of Tailwind CSS globally
             customCss: ["./src/styles/global.css", "./src/styles/custom.css"],

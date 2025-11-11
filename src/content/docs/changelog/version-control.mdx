@@ -1,0 +1,72 @@
+---
+title: Version Control
+description: Restore, manage, and revert versions of your generated apps in CodePup AI.
+---
+
+import { Aside, CardGrid, Card, Icon } from '@astrojs/starlight/components';
+
+# Version Control
+
+Version Control in **CodePup AI** helps you stay safe while experimenting with AI-generated apps.  
+Every time you generate, modify, or enhance your app — a new version is automatically created.
+
+---
+
+## How It Works
+
+<Aside type="tip" title="Smart version history"/>
+Each project maintains up to **20 latest versions**, ensuring your workspace stays lean yet recoverable.
+
+---
+
+### Automatic Saving
+
+Whenever you:
+- Regenerate sections of your app,
+- Apply code edits through prompts,
+- Attach new components, assets, or files,
+
+CodePup automatically snapshots that state as a new version.
+
+<Aside type="danger" title="Frontend-only support">
+Version history is currently available only for frontend-based projects. Fullstack versions are not supported yet.
+</Aside>
+
+
+---
+
+## Restoring Previous Versions
+
+Click the **clock icon** 🕓 in the top bar to view your version history.
+
+You'll see something like this:
+
+![Version control panel](../assets/version.webp)
+
+Select any previous version to restore it instantly.  
+**CodePup** will automatically revert your project to that selected version.
+
+---
+
+## Version Limitations
+
+- Only the **latest 20 versions** are stored.
+- Older ones are automatically pruned to save space.
+- File uploads and custom assets attached to older versions are **retained** safely.
+
+---
+
+## Best Practices
+
+<CardGrid>
+    <Card title="Combine with Export" icon="information">
+        Export your generated project to GitHub occasionally for offline backups or code reviews.
+    </Card>
+    <Card title="Roll forward, not backward" icon="star">
+        When restoring a version, make your new edits on top — this keeps your context recent.
+    </Card>
+</CardGrid>
+
+---
+
+> 🐾 With **CodePup AI**, version control isn't just about recovery — it's about **creative safety** while experimenting with AI-powered code generation.
