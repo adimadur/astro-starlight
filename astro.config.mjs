@@ -52,7 +52,7 @@ export default defineConfig({
                 {
                     label: "Changelog",
                     items: [
-                        { label: "Publish", link: "/changelog/publish/" },
+                        { label: "Publish", link: "/changelog/publish/", badge: { text: "NEW", variant: "note" } },
                         { label: "Version Control", link: "/changelog/version-control/" },
                     ],
                 }
