@@ -41,15 +41,20 @@ export default defineConfig({
             ],
             sidebar: [
                 {
-                    label: "Guides",
-                    autogenerate: { directory: "" },
+                    label: "Introduction",
+                    collapsed: true,
+                    items: [
+                        { label: "Welcome", link: "/introduction/welcome/" },
+                        { label: "Plans and credits", link: "/introduction/plans-and-credits/" },
+                        { label: "FAQ", link: "/introduction/faq/" },
+                    ],
                 },
             ],
             // Import of Tailwind CSS globally
-            customCss: ["./src/styles/global.css"],
+            customCss: ["./src/styles/global.css", "./src/styles/custom.css"],
 
             // Disable the right fast navigation part (also known as Table of Contents)
-            tableOfContents: false,
+            // tableOfContents: false,
         }),
     ],
     vite: {
