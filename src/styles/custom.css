@@ -1,0 +1,32 @@
+:root {
+  --accent-light: #bef264; /* lime-300 */
+  --accent-dark: #84cc16; /* lime-600 */
+}
+
+/* Apply smooth backgrounds & typography */
+body {
+  font-family: "Geist", "Inter", sans-serif;
+  background-color: hsl(0 0% 99%);
+}
+
+[data-theme="dark"] body {
+  background-color: hsl(0 0% 7%);
+}
+
+/* Hero title gradient text */
+.hero-title span {
+  background: linear-gradient(to bottom, var(--accent-light), var(--accent-dark));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Subtle grid background similar to your Hero */
+.hero-grid {
+  background-image:
+    linear-gradient(to right, rgba(240,240,240,0.05) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(240,240,240,0.05) 1px, transparent 1px);
+  background-size: 2rem 2rem;
+  mask-image: radial-gradient(circle at 50% 50%, black 0%, black 20%, transparent 100%);
+  mask-repeat: no-repeat;
+  mask-position: center;
+}
