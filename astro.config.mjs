@@ -3,6 +3,7 @@
 import { defineConfig } from "astro/config";
 import starlight from "@astrojs/starlight";
 import tailwindcss from "@tailwindcss/vite";
+import starlightThemeNova from 'starlight-theme-nova'
 
 // https://astro.build/config
 export default defineConfig({
@@ -39,10 +40,17 @@ export default defineConfig({
                     href: "https://instagram.com/codepupai",
                 },
             ],
+            plugins: [
+                starlightThemeNova({
+                    nav: [
+                        {label: "Introduction", href: "/introduction/welcome/"},
+                        {label: "Changelog", href: "/changelog/publish/"},
+                    ]
+                }),
+            ],
             sidebar: [
                 {
                     label: "Introduction",
-                    // collapsed: true,
                     items: [
                         { label: "Welcome", link: "/introduction/welcome/" },
                         { label: "Plans and credits", link: "/introduction/plans-and-credits/" },
@@ -51,6 +59,7 @@ export default defineConfig({
                 },
                 {
                     label: "Changelog",
+                    collapsed: true,
                     items: [
                         { label: "Publish", link: "/changelog/publish/", badge: { text: "NEW", variant: "note" } },
                         { label: "Version Control", link: "/changelog/version-control/" },
