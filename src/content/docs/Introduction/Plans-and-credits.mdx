@@ -3,23 +3,41 @@ title: Plans and Credits
 description: Learn about CodePup AI's plans, credits, and how billing works.
 ---
 
-import { Card, Badge, Tabs, TabItem } from '@astrojs/starlight/components';
+import { Card, Badge, Tabs, TabItem ,Aside } from '@astrojs/starlight/components';
 
-CodePup AI offers flexible pricing options designed for creators, startups, and teams of all sizes. Credits are used to generate and deploy projects — simple, transparent, and predictable.
+Understanding plans, credit usage, and credit rollovers in CodePup AI
 
-## Plans Overview
+CodePup AI offers flexible subscription plans to match the needs of business owners, startups, product managers, MVP builders. Each plan provides access to powerful features and monthly credits that you can use for generation, modification, publishing, and exporting your projects.
+
+When you use CodePup AI, every AI action consumes credits — giving you full control and transparency over your usage.
+
+## Feature Comparison: Free vs. Paid Plans
 
 <Tabs>
+    <TabItem label="Free">  <Card title="Free" icon="approve-check">
+        <ul>
+            <Badge variant="note" text="Free of Cost" size="large" />
+            <li>30 daily credits</li>
+            <li>Generate & modify projects</li>
+            <li>Publish projects</li>
+            <li>Project Type: Public</li>
+            <li>Support: Community</li>
+        </ul>
+    </Card>
+    </TabItem>
     <TabItem label="Basic">  <Card title="Basic" icon="approve-check">
         <ul>
             <Badge variant="note" text="$25/month" size="large" />
             <li>30 daily credits</li>
             <li>100 total credits</li>
-            <li>Features: Generation, Modification, Publish, Export to GitHub</li>
-            <li>Project Type: Public</li>
+            <li>Generate & modify projects</li>
+            <li>Publish projects</li>
+            <li>Export Project Code to GitHub</li>
+            <li>Project Type: Private</li>
+            <li>Remove “Edit with CodePup” badge from published sites</li>
             <li>Support: Community</li>
         </ul>
-        <p><em>Perfect for individuals just starting out.</em></p>
+        
     </Card>
     </TabItem>
     <TabItem label="Pro"> <Card title="Pro" icon="approve-check">
@@ -27,11 +45,13 @@ CodePup AI offers flexible pricing options designed for creators, startups, and 
             <Badge variant="note" text="$50/month" size="large" />
             <li>30 daily credits</li>
             <li>220 total credits</li>
-            <li>Features: Generation, Modification, Publish, Export to GitHub</li>
+            <li>Generate & modify projects</li>
+            <li>Publish projects</li>
+            <li>Export Project Code to GitHub</li>
             <li>Project Type: Private</li>
+            <li>Remove “Edit with CodePup” badge from published sites</li>
             <li>Support: Priority Email</li>
         </ul>
-        <p><em>Ideal for creators who need more flexibility.</em></p>
     </Card>
     </TabItem>
     <TabItem label="Advance">  <Card title="Advance" icon="approve-check">
@@ -39,11 +59,13 @@ CodePup AI offers flexible pricing options designed for creators, startups, and 
             <Badge variant="note" text="$200/month" size="large" />
             <li>30 daily credits</li>
             <li>1100 total credits</li>
-            <li>Features: Generation, Modification, Publish, Export to GitHub</li>
+            <li>Generate & modify projects</li>
+            <li>Publish projects</li>
+            <li>Export Project Code to GitHub</li>
             <li>Project Type: Private</li>
+            <li>Remove “Edit with CodePup” badge from published sites</li>
             <li>Support: Dedicated Support</li>
         </ul>
-        <p><em>For teams and professionals needing everything unlocked.</em></p>
     </Card>
     </TabItem>
 
@@ -51,38 +73,65 @@ CodePup AI offers flexible pricing options designed for creators, startups, and 
 
 
  
+## Available Paid Plans
 
 
+| Plan | Monthly Credits | Monthly Billing | Annual Billing (Discounted) |
+|------|------------------|-----------------|-----------------------------|
+| **Basic** | 100 | $25 | $250 ($21/month) |
+| **Pro** | 220 | $50 | $500 ($42/month) |
+| **Advance** | 1,100 | $200 | $2,000 ($167/month) |
 
-## Credit System
 
-Each site generation or modification consumes credits.  
-Credits can be refilled anytime from your dashboard.
+---
 
-| Action | Credit Usage |
-|--------|---------------|
-| Generate new website | 15 credits |
-| Modify website | 5 credits |
-| Deploy to CodePup Hosting | Free (Public) |
-| Export project (GitHub) | Free |
+
+## Credit Usage
+
+CodePup AI uses a **usage-based credit system**, ensuring you only spend credits for what you actually use.
+
+| Action | Description | Credits Used | Availability |
+|---------|--------------|---------------|---------------|
+| **Generate** | Create new website sections, UI layouts, or components using AI | **15 credits** | All plans |
+| **Modify** | Edit, update, or enhance existing designs or content | **5 credits** | All plans |
+| **Publish** | Deploy and share your project instantly | **Free** | All plans |
+| **Export to GitHub** | Push your generated project code directly to GitHub | **Free** | Paid plans only |
+
 <br/>
 <br/>
 ---
 
-## Billing and Subscription
+## Credit Display
 
-Payments are securely processed via Stripe or Razorpay.  
-All plans are billed monthly, and you can cancel anytime — no hidden fees.
+You can easily track your **credit balance and usage** right inside the CodePup AI interface — no need to dig through settings.
+- On the **dashboard (index page)**, your **total available credits** are shown at the **top-right corner** of the screen.
+<div class="rounded-lg shadow-lg overflow-hidden border border-gray-200">
+![Publish panel](../assets/introduction/credit_display_indexpage.webp)
+</div>
 
-Your credit balance resets at the start of each billing cycle.  
-Unused credits expire 2 months after the date of purchase.
+<br/>
+
+- When **building a project**, your **current credits** are also visible at the **top-right corner** of the editor — so you always know how many credits you have before generating or modifying anything.
+<div class="rounded-lg shadow-lg overflow-hidden border border-gray-200">
+![Publish panel](../assets/introduction/credit_display_chatpage.webp)
+</div>
+
+Each time you perform an action (like **Generate** or **Modify**), your remaining credits update instantly.
+
+---
+## Credit Rollovers
+
+Unused monthly credits **automatically roll over** at the end of your billing cycle, as long as your subscription remains active.
+- **Monthly plans:** Rolled-over credits remain valid for **1 additional month**
+- **Annual plans:** Rolled-over credits remain valid for the **entire duration** of your annual plan
+Each time you perform an action (like **Generate** or **Modify**), your remaining credits update instantly.
 
 ---
 
 ## Upgrading or Downgrading
 
 - You can upgrade instantly from your dashboard.  
-- Downgrades take effect in the next billing cycle.  
+- Downgrades take effect in the **next billing cycle**.  
 - Your projects remain safe and accessible even if your subscription ends.
 
 ---

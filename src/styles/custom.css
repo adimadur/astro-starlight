@@ -1,21 +1,100 @@
-@layer base, starlight, theme, components, utilities;
-
 @import '@astrojs/starlight-tailwind';
 @import 'tailwindcss/theme.css' layer(theme);
 @import 'tailwindcss/utilities.css' layer(utilities);
 
-
+/* Define theme variables outside of any CSS layer so they override theme defaults (unlayered > layered) */
 :root {
-  --accent-light: #bef264; /* lime-300 */
-  --accent-dark: #84cc16; /* lime-600 */
+    /* Dark mode (default) - Lime theme */
+    --sl-color-accent-low: #1a2e05; /* lime-950 */
+    --sl-color-accent: #d9f99d; /* lime-200 */
+    --sl-color-accent-high: #d9f99d; /* lime-200 */
+
+    /* Gray scale adjustments for lime */
+    --sl-color-gray-1: #e5e7eb;
+    --sl-color-gray-2: #d1d5db;
+    /* --sl-color-gray-3: #a3e635; lime accent for links/text */
+    --sl-color-gray-4: #4b5563;
+    --sl-color-gray-5: #374151;
+    --sl-color-gray-6: #1f2937;
+
+    /* Green variants */
+    --sl-color-green-low: #1a2e05;
+    --sl-color-green: #65a30d;
+    --sl-color-green-high: #bef264;
+
+    /* Code blocks */
+    --sl-color-bg-inline-code: #1a2e05;
+    --sl-color-border-inline-code: #3f6212;
+    
+    /* Navigation background */
+    /* --sl-color-bg-nav: color-mix(in srgb, #1a2e05 50%, transparent); */
 }
 
-/* Apply smooth backgrounds & typography */
-body {
-  font-family: "Geist", "Inter", sans-serif;
-  background-color: hsl(0 0% 99%);
+:root[data-theme='light'] {
+    /* Light mode - Lime theme */
+    /* --sl-color-text-accent: #000; */
+    --sl-color-accent-low: #ecfccb; /* lime-100 */
+    --sl-color-accent: #b2e961; /* lime-400 */
+    --sl-color-accent-high: #365314; /* lime-900 */
+
+    /* Gray scale for light mode */
+    --sl-color-gray-1: #1f2937;
+    --sl-color-gray-2: #374151;
+    --sl-color-gray-4: #9ca3af;
+    --sl-color-gray-5: #d1d5db;
+    --sl-color-gray-6: #e5e7eb;
+    --sl-color-gray-7: #f3f4f6;
+
+    /* Green variants */
+    --sl-color-green-low: #dcfce7;
+    --sl-color-green: #84cc16;
+    --sl-color-green-high: #365314;
+
+    /* Code blocks */
+    --sl-color-bg-inline-code: #f7fee7;
+    --sl-color-border-inline-code: #d9f99d;
+    
+    /* Navigation background */
+    /* --sl-color-bg-nav: color-mix(in srgb, #ecfccb 80%, transparent); */
 }
 
-[data-theme="dark"] body {
-  background-color: hsl(0 0% 7%);
+/* Override Nova button styles - Primary buttons with dark background */
+.nova-link-button-primary {
+    background-color: var(--sl-color-green) !important;
+    color: #000000 !important;
+    font-weight: 600 !important;
+}
+
+.dark .nova-link-button-primary {
+    background-color: var(--sl-color-green) !important;
+    color: #000000 !important;
+    font-weight: 600 !important;
+}
+
+.nova-link-button-primary:hover {
+    background-color: var(--sl-color-green-high) !important;
+    color: #000000 !important;
+}
+
+.dark .nova-link-button-primary:hover {
+    background-color: var(--sl-color-green-high) !important;
+    color: #000000 !important;
+}
+
+/* Override Nova link colors */
+.nova-header-nav-link:hover,
+.nova-link-card:hover,
+.sl-markdown-content a {
+    color: var(--sl-color-accent) !important;
+}
+
+/* Link cards */
+.nova-link-card:hover .nova-link-card-link {
+    color: var(--sl-color-accent) !important;
+}
+
+/* Override Nova sidebar link colors */
+
+:root[data-theme="light"] a.astro-3ii7xxms {
+  color: #000 !important;
 }

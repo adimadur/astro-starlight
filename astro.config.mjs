@@ -4,11 +4,13 @@ import { defineConfig } from "astro/config";
 import starlight from "@astrojs/starlight";
 import tailwindcss from "@tailwindcss/vite";
 import starlightThemeNova from 'starlight-theme-nova'
+import react from '@astrojs/react';
 
 // https://astro.build/config
 export default defineConfig({
     site: "https://docs.codepup.ai",
     integrations: [
+        react(),
         starlight({
             title: "CodePup AI",
             description:
@@ -43,12 +45,17 @@ export default defineConfig({
             plugins: [
                 starlightThemeNova({
                     nav: [
-                        {label: "Introduction", href: "/introduction/welcome/"},
-                        {label: "Changelog", href: "/changelog/publish/"},
+                        
                     ]
                 }),
             ],
             sidebar: [
+                // {
+                //     label: "Testing",
+                //     items: [
+                //         { label: "Testing", link: "/testing/testing/" },
+                //     ],
+                // },
                 {
                     label: "Introduction",
                     items: [
@@ -58,16 +65,17 @@ export default defineConfig({
                     ],
                 },
                 {
-                    label: "Changelog",
+                    label: "Release Log",
                     collapsed: true,
                     items: [
-                        { label: "Publish", link: "/changelog/publish/", badge: { text: "NEW", variant: "note" } },
-                        { label: "Version Control", link: "/changelog/version-control/" },
+                        { label: "Version Control", link: "/release-log/version-control/", badge: { text: "NEW", variant: "success" } },
+                        { label: "Publish", link: "/release-log/publish/" },
+                        { label: "Export to GitHub", link: "/release-log/export-to-github/" },
                     ],
                 }
             ],
             // Import of Tailwind CSS globally
-            customCss: ["./src/styles/global.css", "./src/styles/custom.css"],
+            customCss: ["./src/styles/custom.css"],
 
             // Disable the right fast navigation part (also known as Table of Contents)
             // tableOfContents: false,

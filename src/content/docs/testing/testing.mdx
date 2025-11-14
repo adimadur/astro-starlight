@@ -1,0 +1,552 @@
+---
+title: Complete Theme & Component Showcase
+description: A comprehensive test page showcasing all Markdown features and Starlight components
+---
+
+import { Card, CardGrid, LinkCard } from '@astrojs/starlight/components';
+import { Aside } from '@astrojs/starlight/components';
+import { Badge } from '@astrojs/starlight/components';
+import { FileTree } from '@astrojs/starlight/components';
+import { Icon } from '@astrojs/starlight/components';
+import { LinkButton } from '@astrojs/starlight/components';
+import { Steps } from '@astrojs/starlight/components';
+import { Tabs, TabItem } from '@astrojs/starlight/components';
+import { Code } from 'astro:components';
+import { CodeFile } from 'starlight-theme-nova/components'
+import { CodePackageManagers } from 'starlight-theme-nova/components'
+import { CodeTabItem, CodeTabs } from 'starlight-theme-nova/components'
+
+# Complete Theme & Component Showcase
+
+This page demonstrates all Markdown elements and Starlight components to test your lime theme.
+
+## Headings & Text Formatting
+
+### This is a Level 3 Heading
+#### This is a Level 4 Heading
+##### This is a Level 5 Heading
+###### This is a Level 6 Heading
+
+Regular paragraph text with **bold text**, *italic text*, ***bold and italic***, ~~strikethrough~~, and `inline code`.
+
+Here's a [link to Astro](https://astro.build) and here's an <Badge text="New" variant="tip" /> inline badge.
+
+---
+
+## Badges
+
+<Badge text="Note" variant="note" size="large" />
+<Badge text="Tip" variant="tip" size="medium" />
+<Badge text="Caution" variant="caution" size="small" />
+<Badge text="Danger" variant="danger" />
+<Badge text="Success" variant="success" />
+<Badge text="Default" />
+
+---
+
+## Asides (Callouts)
+
+<Aside>
+This is a default aside with useful information.
+</Aside>
+
+<Aside type="note" title="Note Title">
+This is a note aside. Use it for additional information that enhances understanding.
+</Aside>
+
+<Aside type="tip" title="Pro Tip">
+This is a tip aside. Share helpful tricks and best practices here.
+</Aside>
+
+<Aside type="caution" title="Be Careful!">
+This is a caution aside. Warn users about potential pitfalls or important considerations.
+</Aside>
+
+<Aside type="danger" title="⚠️ Warning">
+This is a danger aside. Use it for critical warnings that users must not ignore.
+</Aside>
+
+---
+
+## Lists
+
+### Unordered List
+- First item
+- Second item with **bold text**
+- Third item
+  - Nested item 1
+  - Nested item 2
+    - Deeply nested item
+
+### Ordered List
+1. First step
+2. Second step
+3. Third step
+   1. Sub-step A
+   2. Sub-step B
+4. Fourth step
+
+### Task List
+- [x] Completed task
+- [x] Another completed task
+- [ ] Pending task
+- [ ] Another pending task
+
+---
+
+## Blockquotes
+
+> This is a simple blockquote.
+> 
+> It can span multiple lines.
+
+> ### Blockquote with Heading
+> 
+> You can include **formatted text** and `code` inside blockquotes.
+> 
+> > Nested blockquote
+
+---
+
+## Code Blocks
+
+### JavaScript Code
+
+```js title="example.js"
+function greet(name) {
+  console.log(`Hello, ${name}!`);
+  return `Welcome to the lime theme!`;
+}
+
+const user = "Developer";
+greet(user);
+```
+
+### TypeScript with Highlighting
+
+```ts {2-4} title="config.ts"
+export const config = {
+  theme: 'lime',
+  mode: 'dark',
+  accent: '#84cc16'
+};
+```
+
+### Python
+
+```python title="hello.py"
+def calculate_sum(a: int, b: int) -> int:
+    """Calculate the sum of two numbers."""
+    result = a + b
+    print(f"The sum is: {result}")
+    return result
+
+# Call the function
+total = calculate_sum(10, 20)
+```
+
+### Shell Commands
+
+```bash
+npm install @astrojs/starlight
+npm run dev
+git commit -m "Add lime theme"
+```
+
+---
+
+## Code Component
+
+
+---
+
+## Tables
+
+| Feature | Status | Priority | Notes |
+|---------|--------|----------|-------|
+| Lime Theme | ✅ Active | High | Primary accent color |
+| Dark Mode | ✅ Active | High | Default mode |
+| Light Mode | ✅ Active | Medium | Alternative theme |
+| Responsive | ✅ Active | High | Mobile-first |
+| Animations | 🚧 Beta | Low | In progress |
+
+### Table with Alignment
+
+| Left Aligned | Center Aligned | Right Aligned |
+|:-------------|:--------------:|--------------:|
+| Text | Text | Text |
+| More text | More text | More text |
+| Even more | Even more | Even more |
+
+---
+
+## Link Buttons
+
+<LinkButton href="https://astro.build" variant="primary">Primary Button</LinkButton>
+<LinkButton href="https://starlight.astro.build" variant="secondary">Secondary Button</LinkButton>
+<LinkButton href="#" variant="minimal">Minimal Button</LinkButton>
+
+<LinkButton href="https://github.com" icon="external">
+  External Link
+</LinkButton>
+
+---
+
+## Cards
+
+### Single Card
+
+<Card title="Getting Started" icon="rocket">
+  Learn how to set up your project with the lime theme. This card demonstrates the beautiful lime accent colors on hover.
+</Card>
+
+### Card Grid
+
+<CardGrid>
+  <Card title="🎨 Theming" icon="pencil">
+    Customize your site with lime colors and modern design patterns.
+  </Card>
+  <Card title="📱 Responsive" icon="laptop">
+    Mobile-first design that works on all devices.
+  </Card>
+  <Card title="⚡ Fast" icon="rocket">
+    Built with performance in mind using Astro.
+  </Card>
+  <Card title="♿ Accessible" icon="information">
+    WCAG compliant with proper contrast ratios.
+  </Card>
+</CardGrid>
+
+---
+
+## Link Cards
+
+<LinkCard
+  title="Astro Documentation"
+  description="Learn how to build with Astro"
+  href="https://docs.astro.build"
+/>
+
+<CardGrid>
+  <LinkCard
+    title="Starlight Docs"
+    description="Build beautiful documentation sites"
+    href="https://starlight.astro.build"
+  />
+  <LinkCard
+    title="Nova Theme"
+    description="Modern Starlight theme"
+    href="https://github.com/lorenzolewis/starlight-nova"
+  />
+  <LinkCard
+    title="Tailwind CSS"
+    description="Utility-first CSS framework"
+    href="https://tailwindcss.com"
+  />
+  <LinkCard
+    title="GitHub"
+    description="Where the code lives"
+    href="https://github.com"
+  />
+</CardGrid>
+
+---
+
+## Icons
+
+Here are some icons: <Icon name="star" /> <Icon name="rocket" /> <Icon name="heart" /> <Icon name="github" /> <Icon name="twitter" />
+
+Larger icons: <Icon name="star" size="2rem" /> <Icon name="rocket" size="2rem" color="lime" />
+
+---
+
+## File Tree
+
+<FileTree>
+- src/
+  - pages/
+    - index.astro
+    - about.astro
+    - **blog/** Blog posts directory
+      - post-1.md
+      - post-2.md
+  - components/
+    - Header.astro
+    - Footer.astro
+  - styles/
+    - custom.css Main theme customization
+    - global.css
+- public/
+  - favicon.svg
+  - robots.txt
+- astro.config.mjs
+- package.json
+- tsconfig.json
+</FileTree>
+
+---
+
+## Steps
+
+<Steps>
+
+1. **Install dependencies**
+   
+   Run the following command to install Starlight:
+   
+   ```bash
+   npm install @astrojs/starlight
+   ```
+
+2. **Configure your theme**
+   
+   Create a `custom.css` file with your lime theme variables:
+   
+   ```css
+   :root {
+     --sl-color-accent: #84cc16;
+   }
+   ```
+
+3. **Add custom CSS**
+   
+   Update your `astro.config.mjs`:
+   
+   ```js
+   export default defineConfig({
+     integrations: [
+       starlight({
+         customCss: ['./src/styles/custom.css']
+       })
+     ]
+   });
+   ```
+
+4. **Test your theme**
+   
+   Run the dev server and check your site:
+   
+   ```bash
+   npm run dev
+   ```
+
+</Steps>
+
+---
+
+## Tabs
+
+<Tabs>
+  <TabItem label="npm">
+    ```bash
+    npm install @astrojs/starlight
+    npm run dev
+    ```
+  </TabItem>
+  <TabItem label="pnpm">
+    ```bash
+    pnpm add @astrojs/starlight
+    pnpm dev
+    ```
+  </TabItem>
+  <TabItem label="yarn">
+    ```bash
+    yarn add @astrojs/starlight
+    yarn dev
+    ```
+  </TabItem>
+  <TabItem label="bun">
+    ```bash
+    bun add @astrojs/starlight
+    bun dev
+    ```
+  </TabItem>
+</Tabs>
+
+### Configuration Tabs
+
+<Tabs>
+  <TabItem label="JavaScript">
+    ```js title="astro.config.mjs"
+    import { defineConfig } from 'astro/config';
+    import starlight from '@astrojs/starlight';
+
+    export default defineConfig({
+      integrations: [
+        starlight({
+          title: 'My Docs',
+          customCss: ['./src/styles/custom.css']
+        })
+      ]
+    });
+    ```
+  </TabItem>
+  <TabItem label="TypeScript">
+    ```ts title="astro.config.ts"
+    import { defineConfig } from 'astro/config';
+    import starlight from '@astrojs/starlight';
+
+    export default defineConfig({
+      integrations: [
+        starlight({
+          title: 'My Docs',
+          customCss: ['./src/styles/custom.css']
+        }) as any
+      ]
+    });
+    ```
+  </TabItem>
+</Tabs>
+
+---
+
+## Horizontal Rules
+
+You can create horizontal rules with:
+
+---
+
+***
+
+___
+
+---
+
+## Images (Markdown Syntax)
+
+![Lime theme illustration](https://images.unsplash.com/photo-1762987297518-d6ae33ee593d?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D)
+
+---
+
+## Inline HTML
+
+You can use <span style="color: #84cc16; font-weight: bold;">inline HTML</span> with custom styling.
+
+<div style="padding: 1rem; background: #f7fee7; border-left: 4px solid #84cc16; border-radius: 0.5rem; margin: 1rem 0;">
+  <strong>Custom HTML Block:</strong> This is a custom styled div with lime accents.
+</div>
+
+---
+
+## Footnotes
+
+Here's a sentence with a footnote[^1].
+
+Here's another with a longer footnote[^longnote].
+
+[^1]: This is the first footnote.
+[^longnote]: This is a longer footnote with multiple paragraphs.
+
+    You can have multiple paragraphs in footnotes.
+
+---
+
+## Definition Lists
+
+Term 1
+: Definition 1a
+: Definition 1b
+
+Term 2
+: Definition 2
+
+---
+
+## Escaped Characters
+
+You can escape special characters: \* \_ \` \[ \] \( \) \# \+ \- \. \!
+
+---
+
+## Mixed Content Example
+
+<Card title="📦 Installation Guide" icon="puzzle">
+
+To get started with the lime theme:
+
+1. Install the package
+2. Configure your settings
+3. Customize colors
+
+<Tabs>
+  <TabItem label="Quick Start">
+    ```bash
+    npm create astro@latest -- --template starlight
+    ```
+  </TabItem>
+  <TabItem label="Manual Setup">
+    Follow the <LinkButton href="#steps" variant="minimal">steps above</LinkButton> for detailed instructions.
+  </TabItem>
+</Tabs>
+
+<Aside type="tip">
+Remember to restart your dev server after making changes!
+</Aside>
+
+</Card>
+
+---
+
+## Code Component
+
+<Code code={`const theme = 'lime';
+console.log(\`Using \${theme} theme\`);`} lang="ts" title="inline-code.ts"  />
+
+---
+
+## CodeFile component
+
+<CodeFile path="codeFile.ts" />
+
+---
+
+## Code Package Managers
+
+<CodePackageManagers
+  packages="starlight-theme-nova @astrojs/starlight"
+  dev={true}
+/>
+
+---
+
+## Code Tabs
+
+<CodeTabs>
+  <CodeTabItem
+    label="index.js"
+    lang="js"
+    code={`function () {\n  console.log('Hello, JS!')\n}`}
+    theme="nova"
+  />
+  <CodeTabItem
+    label="index.ts"
+    lang="ts"
+    code={`function (): void {\n  console.log('Hello, TS!')\n}`}
+  />
+</CodeTabs>
+
+## Summary
+
+This page demonstrates:
+
+- ✅ All heading levels (H1-H6)
+- ✅ Text formatting (bold, italic, code, links)
+- ✅ Lists (ordered, unordered, nested, tasks)
+- ✅ Blockquotes
+- ✅ Code blocks with syntax highlighting
+- ✅ Tables with alignment
+- ✅ Badges in all variants
+- ✅ Asides in all types
+- ✅ Cards and Card Grids
+- ✅ Link Cards
+- ✅ Icons
+- ✅ Link Buttons
+- ✅ File Trees
+- ✅ Steps
+- ✅ Tabs
+- ✅ Horizontal rules
+- ✅ Images
+- ✅ Footnotes
+- ✅ Mixed content combinations
+
+Your lime theme colors should be visible throughout this page on interactive elements, links, buttons, and accents! 🎨
