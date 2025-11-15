@@ -71,6 +71,17 @@ export default defineConfig({
                         { label: "Version Control", link: "/release-log/version-control/", badge: { text: "NEW", variant: "success" } },
                         { label: "Publish", link: "/release-log/publish/" },
                         { label: "Export to GitHub", link: "/release-log/export-to-github/" },
+                        { label: "Supabase Integration", link: "/release-log/supabase-integration/" },
+                    ],
+                },
+                {
+                    label: "Integration",
+                    items: [
+                        { label: "GitHub Integration", link: "/integration/github-integration/" },
+                        { label: "Supabase Integration", link: "/integration/supabase-integration/" },
+                        { label: "Resend Integration", link: "/integration/resend-integration/" },
+                        { label: "UI Component Integration", link: "/integration/ui-component-integration/" },
+                        { label: "Stripe Integration", link: "/integration/stripe-integration/" },
                     ],
                 }
             ],

@@ -1,0 +1,103 @@
+---
+title: Supabase Integration
+description: Introducing seamless Supabase integration for fullstack apps generated with CodePup AI.
+---
+
+import { Aside, CardGrid, Card } from "@astrojs/starlight/components";
+
+# Supabase Integration
+
+We are introducing **native Supabase integration** for fullstack projects generated through CodePup AI.  
+This release removes the need for manual setup—CodePup now provisions, manages, and links Supabase resources automatically using a single access token.
+
+---
+
+## What’s New
+
+<Aside type="tip" title="One-step Supabase Setup">
+    Provide your Supabase access token and CodePup handles the entire
+    provisioning process for you.
+</Aside>
+
+Once an access token is entered, CodePup automatically:
+
+-   Creates a Supabase **organization** (if you don't already have one)
+-   Creates a new **Supabase project** inside that organization
+-   Links the Supabase project to your CodePup project
+-   Configures database URLs, API keys, and environment variables internally
+
+There is **no manual dashboard work** required — everything is provisioned instantly.
+
+---
+
+## Seamless Database & Storage Support
+
+### Intelligent Schema Generation
+
+CodePup analyzes your project type and generates appropriate Supabase schemas, relationships, and seed entries automatically.  
+This allows dashboards, admin panels, and complex fullstack applications to work out-of-the-box.
+
+### CSV / Excel Dashboard Creation
+
+When building dashboards from spreadsheets, CodePup automatically:
+
+-   Cleans the dataset
+-   Validates and filters up to **1,000 records**
+-   Inserts the processed records directly into your Supabase database
+-   Configures relevant tables and relationships
+
+This eliminates the need for manual imports or schema setup.
+
+### Automatic Storage Buckets
+
+Depending on your application type, CodePup provisions Supabase storage buckets automatically:
+
+-   User avatars
+-   Product images
+-   File uploads
+-   Media-heavy projects like Pinterest-style apps, drive clones, or multi-asset platforms
+
+Every bucket is created and wired into the generated codebase seamlessly.
+
+---
+
+## Why This Matters
+
+<CardGrid>
+    <Card title="Zero Setup Required" icon="star">
+        Projects now become fully functional fullstack apps after entering only
+        one token.
+    </Card>
+    <Card title="Production-Ready Architecture" icon="approve-check-circle">
+        Databases, schemas, storage, and environment variables are configured
+        with no manual input.
+    </Card>
+    <Card title="Accelerated Development" icon="rocket">
+        Skip hours of setup and start iterating or modifying your fullstack app
+        instantly.
+    </Card>
+</CardGrid>
+
+---
+
+## How It Works
+
+1. Generate a new **Fullstack** project in CodePup.
+2. When prompted, paste your **Supabase Access Token**.
+3. CodePup provisions and links all required resources automatically.
+4. Start working with your connected database and storage immediately.
+
+<Aside type="danger" title="Token Requirement">
+    A valid Supabase access token is required. Without it, fullstack generation
+    will not proceed.
+</Aside>
+
+---
+
+## Looking Ahead
+
+This is the first step toward deeper Supabase automation.
+
+Upcoming releases will focus on performance optimizations, safer schema evolution, deeper API insights, and more intelligent models that understand your project context even better.
+
+CodePup is committed to making fullstack generation truly **end-to-end**, and this integration is a major milestone toward that goal.
