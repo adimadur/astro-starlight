@@ -1,4 +1,91 @@
 ---
 title: UI Component Integration
-description: Announcing UI Component Integration — securely push your generated projects to your own UI Component repositories.
+description: Seamlessly import UI components from external libraries directly into your CodePup projects.
 ---
+
+import { Aside, Card, CardGrid, Steps } from '@astrojs/starlight/components';
+
+<h1 className='hidden' >UI Component Integration</h1>
+
+We’re introducing a new way to bring world-class UI into your generated projects: **copy-prompt component integration**.
+
+This release allows developers to take component prompts from libraries such as **21st.dev** and insert them directly into any CodePup project — with full dependency handling, file creation, and placement automation.
+
+---
+
+## How It Works
+
+When you copy a component prompt from external libraries  
+(for example: <a href="https://21st.dev/community/components">https://21st.dev/community/components</a>)  
+and paste it into CodePup, the system now understands:
+
+- the component’s structure  
+- its required dependencies  
+- its related files (assets, helper files, styles)  
+- where it should live inside your project
+
+After analyzing the prompt, CodePup automatically installs dependencies, generates files, and integrates the component into your existing codebase.
+
+<Aside type="tip" title="Flexible placement">
+Tell CodePup where the component should appear — such as a specific page, section, or layout — and it will position it there automatically.
+</Aside>
+
+---
+
+## Example Workflow
+
+<Steps>
+
+  1. Browse Components
+    Choose a component from libraries like 21st.dev or any other prompt-ready UI source.
+
+  2. Copy the Prompt
+    Copy the component’s provided prompt directly from the UI library.
+
+  3. Paste Into CodePup
+    Use the “Modify project” flow and paste the prompt.  
+    CodePup interprets the component and prepares the integration.
+
+  4. Choose Placement
+    Tell CodePup where the new component belongs — a page, section, route, or layout block.
+
+  5. Automatic Integration
+    Dependencies are installed, files are created, and the component becomes part of your app.
+
+</Steps>
+
+---
+
+## Why This Matters
+
+This release bridges the gap between AI-generated apps and modern component ecosystems.  
+Users can now enrich their projects with high-quality, production-ready components — without manually wiring dependencies, navigating file structures, or troubleshooting broken imports.
+
+---
+
+## Supported Use Cases
+
+- Importing complex UI from 21st.dev  
+- Adding dashboards, forms, tables, charts, navigation components, and full sections  
+- Dropping in hero sections, landing pages, pricing layouts, and complete templates  
+- Installing Tailwind, Radix, ShadCN-style components, or design-system-ready elements  
+- Combining CodePup-generated pages with premium community UI components
+
+<Aside type="caution" title="Component limitations">
+Some component libraries may require framework-specific constraints.  
+CodePup will inform you if additional configuration is needed.
+</Aside>
+
+---
+
+## Looking Ahead
+
+Future releases will expand this integration with:
+
+- smarter component positioning  
+- automatic routing awareness  
+- deeper support for multi-file component packs  
+- improved compatibility with emerging UI ecosystems
+
+This is a significant step toward a world where your CodePup projects can grow with any design system, any component library, and any UI style — simply by pasting a prompt.
+

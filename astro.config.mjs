@@ -61,27 +61,40 @@ export default defineConfig({
                     items: [
                         { label: "Welcome", link: "/introduction/welcome/" },
                         { label: "Plans and credits", link: "/introduction/plans-and-credits/" },
+                        { label: "Getting Started", link: "/introduction/getting-started/" },
                         { label: "FAQ", link: "/introduction/faq/" },
                     ],
                 },
                 {
                     label: "Release Log",
-                    collapsed: true,
+                    // collapsed: true,
                     items: [
                         { label: "Version Control", link: "/release-log/version-control/", badge: { text: "NEW", variant: "success" } },
-                        { label: "Publish", link: "/release-log/publish/" },
                         { label: "Export to GitHub", link: "/release-log/export-to-github/" },
                         { label: "Supabase Integration", link: "/release-log/supabase-integration/" },
                     ],
                 },
                 {
                     label: "Integration",
+                    // collapsed: true,
                     items: [
                         { label: "GitHub Integration", link: "/integration/github-integration/" },
                         { label: "Supabase Integration", link: "/integration/supabase-integration/" },
                         { label: "Resend Integration", link: "/integration/resend-integration/" },
                         { label: "UI Component Integration", link: "/integration/ui-component-integration/" },
                         { label: "Stripe Integration", link: "/integration/stripe-integration/" },
+                    ],
+                },
+                {
+                    label: "Features",
+                    // collapsed: true,
+                    items: [
+                        { label: "Publish", link: "/features/publish/" },
+                        { label: "Use Images", link: "/features/use-images/" },
+                        { label: "Embed Video", link: "/features/embed-video/" },
+                        { label: "Chat and Create", link: "/features/chat-and-create/" },
+                        { label: "Custom Domain", link: "/features/custom-domain/", badge: { text: "Coming Soon", variant: "note" } },
+                        { label: "Security", link: "/features/security/" },
                     ],
                 }
             ],
